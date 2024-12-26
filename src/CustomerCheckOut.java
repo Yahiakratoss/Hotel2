@@ -79,6 +79,8 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -117,7 +119,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mobile Number", "Nationality", "Gender", "Email", "ID prov", "Adress", "Check in date", "Room Number", "Bed", "Room Type", " Price Per Day"
+                "ID", "Name", "Mobile Number", "Nationality", "Gender", "Email", "ID prov", "Adress", "Check in date", "Room Number", "Bed", "Room Type", " Price Per Day", "Check Out Date"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -134,8 +136,20 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Check In Date");
 
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Check Out Date (Today)");
+        jLabel5.setText("Check Out Date ");
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Customer Mobile Number");
@@ -188,6 +202,9 @@ public class CustomerCheckOut extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setText("idProof");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -200,11 +217,12 @@ public class CustomerCheckOut extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton1))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jTextField10)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addGap(150, 150, 150)))
+                                        .addGap(621, 621, 621))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jButton2)
@@ -243,10 +261,17 @@ public class CustomerCheckOut extends javax.swing.JFrame {
                                             .addComponent(jTextField5)
                                             .addComponent(jLabel6)
                                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(213, 213, 213)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1243, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -258,12 +283,17 @@ public class CustomerCheckOut extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                        .addComponent(jButton4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -294,7 +324,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -320,25 +350,37 @@ public class CustomerCheckOut extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:SEARCH BUTTON
-        String roomNo=jTextField1.getText();
-        try  {ResultSet rs = select.getData("select * from customer where roomNo='"+roomNo+"' and checkout is NULL");
+        String idProof=jTextField1.getText();
+        try  {ResultSet rs = select.getData("select * from customer where idProof='"+idProof+"' ");
 
 
         if(rs.next()){
         jTextField1.setEditable(false);
         id=rs.getInt(1);
         jTextField2.setText(rs.getString(2));
-        jTextField3.setText(rs.getString(9));
+        jTextField3.setText(rs.getString("CheckIn"));
+        jTextField4.setText(rs.getString("Checkout"));
         jTextField5.setText(rs.getString(3));
         jTextField6.setText(rs.getString(13));
-         SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
-         Calendar cal = Calendar.getInstance();
-        jTextField4.setText(myFormat.format(cal.getTime()));
-        String dateBeforeString=rs.getString(9);
-        java.util.Date DateBefore=myFormat.parse(dateBeforeString);
-        String dateAfterStrig=myFormat.format(cal.getTime());
-        java.util.Date dateAfter=myFormat.parse(dateAfterStrig);
-        long difference=dateAfter.getTime() - DateBefore.getTime();
+        jTextField10.setText(rs.getString("roomNo"));
+         //SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+         //Calendar cal = Calendar.getInstance();
+          SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+          Calendar cal = Calendar.getInstance();
+            String dateBeforeString = rs.getString("CheckIn");
+            String dateAfterString = rs.getString("Checkout");
+
+            java.util.Date dateBefore = myFormat.parse(dateBeforeString);
+            java.util.Date dateAfter = myFormat.parse(dateAfterString);
+
+            long difference = dateAfter.getTime() - dateBefore.getTime();
+            
+        //jTextField4.setText(myFormat.format(cal.getTime()));
+       // String dateBeforeString=rs.getString(9);
+        //java.util.Date DateBefore=myFormat.parse(dateBeforeString);
+        //String dateAfterStrig=myFormat.format(cal.getTime());
+        //java.util.Date dateAfter=myFormat.parse(dateAfterStrig);
+       // long difference=dateAfter.getTime() - DateBefore.getTime();
         int noOfDayStay=(int) (difference/(1000*60*60*24));
         if(noOfDayStay==0)
             noOfDayStay=1;
@@ -460,7 +502,7 @@ new CustomerCheckOut().setVisible(true);
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        ResultSet rs = select.getData("select *from customer where checkout is NULL");
+        ResultSet rs = select.getData("select *from customer ");
     DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
      try {
         while (rs.next()) {
@@ -469,13 +511,21 @@ new CustomerCheckOut().setVisible(true);
                 rs.getString(4), rs.getString(5), rs.getString(6),
                 rs.getString(7), rs.getString(8), rs.getString(9),
                 rs.getString(10), rs.getString(11), rs.getString(12),
-                rs.getString(13)
+                rs.getString(13),rs.getString(16)
             });  
         }
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, e);
     }
     }//GEN-LAST:event_formComponentShown
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
 
 
@@ -521,6 +571,7 @@ new CustomerCheckOut().setVisible(true);
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -532,6 +583,7 @@ new CustomerCheckOut().setVisible(true);
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
