@@ -68,9 +68,14 @@ public class ManageRoom extends javax.swing.JFrame {
                 "Room Number", "Room Type", "Bed", "Price", "Status"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel2.setText("Room number");
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -80,13 +85,13 @@ public class ManageRoom extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel3.setText("Room Type");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel4.setText("Bed");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel5.setText("Price");
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -108,7 +113,7 @@ public class ManageRoom extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(0, 26, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(128, 117, 0));
         jButton1.setText("Add Room");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -207,15 +212,29 @@ public class ManageRoom extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String roomNo=jTextField1.getText();
-        String roomType=(String)jComboBox1.getSelectedItem();
-        String bed=(String)jComboBox2.getSelectedItem();
-        String price=jTextField2.getText();
-        
-        String Query="insert into room values('"+roomNo+"','"+roomType+"','"+bed+"','"+price+"','Not Booked')";
-        InsertUpdateDelete.setData(Query, "Successfully Updeted");
+          String roomNo = jTextField1.getText().trim();
+    String roomType = (String) jComboBox1.getSelectedItem();
+    String bed = (String) jComboBox2.getSelectedItem();
+    String price = jTextField2.getText().trim();
+
+    // Vérification si roomNo existe déjà dans la base de données
+    String checkQuery = "SELECT * FROM room WHERE roomNo = '" + roomNo + "'";
+    try {
+        ResultSet rs = select.getData(checkQuery);
+        if (rs.next()) {
+            // Si une ligne est trouvée, le roomNo existe déjà
+            JOptionPane.showMessageDialog(null, "Ce numéro de chambre existe déjà. Veuillez entrer un autre numéro.", "Erreur", JOptionPane.ERROR_MESSAGE);
+            return; // Sortir de la méthode sans insérer
+        }
+
+        // Si roomNo n'existe pas, procéder à l'insertion
+        String insertQuery = "INSERT INTO room VALUES('" + roomNo + "','" + roomType + "','" + bed + "','" + price + "','Not Booked')";
+        InsertUpdateDelete.setData(insertQuery, "Chambre ajoutée avec succès !");
         setVisible(false);
         new ManageRoom().setVisible(true);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, e, "Erreur", JOptionPane.ERROR_MESSAGE);
+    }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -240,6 +259,12 @@ public class ManageRoom extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_formComponentShown
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+         // Récupérer la ligne sélectionnée
+         
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments

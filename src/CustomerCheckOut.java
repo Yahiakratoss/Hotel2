@@ -28,7 +28,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
      */
     public CustomerCheckOut() {
         initComponents();
-        
+        jTextField1.setEditable(false);
         jTextField2.setEditable(false); 
         jTextField3.setEditable(false);
         jTextField4.setEditable(false);
@@ -93,11 +93,13 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 26, 51));
         jLabel1.setText("Customer Check Out");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel2.setText("Room Number");
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -105,7 +107,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(0, 26, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(128, 117, 0));
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -124,56 +126,68 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel3.setText("Customer Name");
 
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel4.setText("Check In Date");
 
+        jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel5.setText("Check Out Date ");
 
+        jTextField4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel6.setText("Customer Mobile Number");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel7.setText("Price Per Day");
 
+        jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel8.setText("Number of Days Stay");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel9.setText("Total Amount to collect from customer");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel10.setText("Email");
 
+        jTextField9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
         jButton2.setBackground(new java.awt.Color(0, 26, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(128, 117, 0));
         jButton2.setText("Check Out");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +197,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(0, 26, 51));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(128, 117, 0));
         jButton3.setText("Clear");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -202,8 +216,10 @@ public class CustomerCheckOut extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel11.setText("idProof");
+
+        jTextField10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -212,67 +228,67 @@ public class CustomerCheckOut extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField10)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addGap(150, 150, 150)))
-                                        .addGap(621, 621, 621))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jButton2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel3)
-                                                .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField2))
-                                            .addGap(52, 52, 52)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addGap(189, 189, 189))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addComponent(jTextField3)
-                                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(jLabel8))
-                                                    .addGap(52, 52, 52)))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addComponent(jLabel9)))))
-                                .addGap(63, 63, 63)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jButton4)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField5)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jTextField1)
+                                .addGap(950, 950, 950))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(213, 213, 213)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton1)
+                                .addGap(285, 285, 285))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabel3)
+                                                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextField2))
+                                                .addGap(52, 52, 52)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGap(189, 189, 189))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                .addComponent(jTextField3)
+                                                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addComponent(jLabel8))
+                                                        .addGap(52, 52, 52)))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jLabel9))))
+                                        .addGap(63, 63, 63)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jButton4)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jTextField5)
+                                                    .addComponent(jLabel6)
+                                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 22, Short.MAX_VALUE)))))
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,17 +299,18 @@ public class CustomerCheckOut extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1)
+                                    .addComponent(jLabel2)))
+                            .addComponent(jButton4))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel11)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -332,30 +349,23 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        int response = JOptionPane.showConfirmDialog(null, "Voulez-vous vraiment quitter ?", "Confirmation", JOptionPane.YES_NO_OPTION);
-    if (response == JOptionPane.YES_OPTION) {
-        setVisible(false);
-    }
+          setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:SEARCH BUTTON
-        String idProof=jTextField1.getText();
-        try  {ResultSet rs = select.getData("select * from customer where idProof='"+idProof+"' ");
+        String roomNo=jTextField10.getText();
+        try  {ResultSet rs = select.getData("select * from customer where roomNo='"+roomNo+"' ");
 
 
         if(rs.next()){
-        jTextField1.setEditable(false);
+        jTextField1.setText(rs.getString(7));
         id=rs.getInt(1);
         jTextField2.setText(rs.getString(2));
         jTextField3.setText(rs.getString("CheckIn"));
@@ -418,81 +428,89 @@ public class CustomerCheckOut extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:check out button
-      String name = jTextField2.getText();
-String mobileNumber = jTextField5.getText();
-String email = jTextField9.getText();
-String checkout = jTextField4.getText();
-String numberOfDaysStay = jTextField7.getText();
-String totalAmount = jTextField8.getText();
-roomNo = jTextField1.getText();
+   // Récupération des données du formulaire
+    String idProof = jTextField1.getText();
+    String name = jTextField2.getText();
+    String mobileNumber = jTextField5.getText();
+    String email = jTextField9.getText();
+    String checkout = jTextField4.getText();
+    String numberOfDaysStay = jTextField7.getText();
+    String totalAmount = jTextField8.getText();
+    String roomNo = jTextField10.getText(); // Assurez-vous que jTextField10 contient le numéro de chambre
 
-// Mise à jour des données dans la base
-String query = "update customer set numberOfDaysStay ='" + numberOfDaysStay + "',totalAmount='" + totalAmount + "',checkout='" + checkout + "' where id='" + id + "'";
-InsertUpdateDelete.setData(query, "");
-query = "update room set status = 'not booked' where roomNo='" + roomNo + "'";
-InsertUpdateDelete.setData(query, "");
-
-// Chemin pour sauvegarder le fichier
-String path = "C:/Users/Public/Documents/"; // Un dossier public sûr
-com.itextpdf.text.Document doc = new com.itextpdf.text.Document();
-
-try {
-    PdfWriter.getInstance(doc, new FileOutputStream(path + id + ".pdf"));
-    doc.open();
-
-    // Ajouter le contenu au PDF
-    Paragraph paragraph1 = new Paragraph("                       Hotel Management System\n");
-    doc.add(paragraph1);
-    Paragraph paragraph2 = new Paragraph("*************************************************************************************");
-    doc.add(paragraph2);
-    Paragraph paragraph3 = new Paragraph(
-        "\tBill ID: " + id + "\nCustomer Details:\nName: " + name +
-        "\nMobile Number: " + mobileNumber + "\nEmail: " + email + "\n"
-    );
-    doc.add(paragraph3);
-    doc.add(paragraph2);
-    Paragraph paragraph4 = new Paragraph(
-        "\tRoom Details:\nNumber: " + roomNo + "\nType: " + roomType +
-        "\nBed: " + bed + "\nPrice Per Day: " + jTextField6.getText()
-    );
-    doc.add(paragraph4);
-    doc.add(paragraph2);
-
-    // Ajouter un tableau avec des détails
-    PdfPTable tb1 = new PdfPTable(4);
-    tb1.addCell("Check In Date: " + jTextField3.getText());
-    tb1.addCell("Check OUT Date: " + checkout);
-    tb1.addCell("No of Day Stay: " + numberOfDaysStay);
-    tb1.addCell("Total Amount Paid: " + totalAmount);
-    doc.add(tb1);
-
-    doc.add(paragraph2);
-    Paragraph paragraph5 = new Paragraph("Thank you, Please Visit Again.");
-    doc.add(paragraph5);
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(null, "Erreur lors de la génération du PDF : " + e.getMessage());
-} finally {
-    doc.close();
-}
-
-// Demander confirmation pour imprimer le PDF
-int a = JOptionPane.showConfirmDialog(null, "Do you want to print the bill?", "Select", JOptionPane.YES_NO_OPTION);
-if (a == 0) {
+    // Mise à jour des données dans la base de données
     try {
-        File pdfFile = new File(path + id + ".pdf");
-        if (pdfFile.exists()) {
-            Desktop.getDesktop().open(pdfFile); // Ouvrir le fichier PDF
-        } else {
-            JOptionPane.showMessageDialog(null, "File does not exist: " + pdfFile.getAbsolutePath());
-        }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Erreur lors de l'ouverture du PDF : " + e.getMessage());
-    }
-}
+        // Mise à jour de la table customer
+        String query = "UPDATE customer SET numberOfDaysStay = '" + numberOfDaysStay + "', totalAmount = '" + totalAmount + "', checkout = '" + checkout + "' WHERE idProof = '" + idProof + "'";
+        InsertUpdateDelete.setData(query, "Client checkout updated successfully!");
+        System.out.println("Customer record updated successfully.");
 
-// Fermer la fenêtre actuelle et ouvrir une nouvelle
-setVisible(false);
-new CustomerCheckOut().setVisible(true);
+        // Mise à jour de la table room
+        query = "UPDATE room SET status = 'not booked' WHERE roomNo = '" + roomNo + "'";
+        InsertUpdateDelete.setData(query, "Room status updated to 'not booked' successfully!");
+        System.out.println("Room status updated to 'not booked' successfully.");
+
+        // Chemin pour enregistrer le fichier PDF
+        String path = "C:/Users/Public/Documents/"; // Dossier public sûr pour enregistrer les fichiers
+        com.itextpdf.text.Document doc = new com.itextpdf.text.Document();
+
+        try {
+            PdfWriter.getInstance(doc, new FileOutputStream(path + idProof + ".pdf"));
+            doc.open();
+
+            // Ajouter le contenu du PDF
+            doc.add(new Paragraph("                       Hotel Management System\n"));
+            doc.add(new Paragraph("*************************************************************************************"));
+            doc.add(new Paragraph(
+                "\tBill ID: " + idProof + "\nCustomer Details:\nName: " + name +
+                "\nMobile Number: " + mobileNumber + "\nEmail: " + email + "\n"
+            ));
+            doc.add(new Paragraph("*************************************************************************************"));
+            doc.add(new Paragraph(
+                "\tRoom Details:\nNumber: " + roomNo + "\nType: " + roomType +
+                "\nBed: " + bed + "\nPrice Per Day: " + jTextField6.getText()
+            ));
+            doc.add(new Paragraph("*************************************************************************************"));
+
+            // Ajouter un tableau avec les détails du séjour
+            PdfPTable tb1 = new PdfPTable(4);
+            tb1.addCell("Check In Date: " + jTextField3.getText());
+            tb1.addCell("Check OUT Date: " + checkout);
+            tb1.addCell("No of Day Stay: " + numberOfDaysStay);
+            tb1.addCell("Total Amount Paid: " + totalAmount);
+            doc.add(tb1);
+
+            doc.add(new Paragraph("*************************************************************************************"));
+            doc.add(new Paragraph("Thank you, Please Visit Again."));
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erreur lors de la génération du PDF : " + e.getMessage());
+        } finally {
+            doc.close();
+        }
+
+        // Confirmation pour imprimer le fichier PDF
+        int a = JOptionPane.showConfirmDialog(null, "Do you want to print the bill?", "Select", JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            try {
+                File pdfFile = new File(path + idProof + ".pdf");
+                if (pdfFile.exists()) {
+                    Desktop.getDesktop().open(pdfFile); // Ouvrir le fichier PDF
+                } else {
+                    JOptionPane.showMessageDialog(null, "Le fichier n'existe pas : " + pdfFile.getAbsolutePath());
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Erreur lors de l'ouverture du PDF : " + e.getMessage());
+            }
+        }
+
+        // Réinitialisation de la fenêtre
+        setVisible(false);
+        new CustomerCheckOut().setVisible(true);
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Erreur : " + e.getMessage());
+    }
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -502,8 +520,17 @@ new CustomerCheckOut().setVisible(true);
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        ResultSet rs = select.getData("select *from customer ");
+      // Requête pour obtenir les clients dont la chambre est 'not booked'
+    String query = "SELECT customer.* FROM customer " +
+                   "INNER JOIN room ON customer.roomNo = room.roomNo " +
+                   "WHERE room.status = 'booked'";
+
+    ResultSet rs = select.getData(query); // Exécution de la requête avec la condition de statut "not booked"
+    
     DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+    // Effacer les anciennes lignes dans le tableau
+    model.setRowCount(0);
      try {
         while (rs.next()) {
             model.addRow(new Object[]{
@@ -526,6 +553,10 @@ new CustomerCheckOut().setVisible(true);
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
 
 

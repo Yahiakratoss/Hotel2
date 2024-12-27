@@ -89,7 +89,7 @@ public class CustomerDetailsBill extends javax.swing.JFrame {
         jLabel2.setText("Search By Check Out Date");
 
         jButton1.setBackground(new java.awt.Color(0, 26, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(128, 117, 0));
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
