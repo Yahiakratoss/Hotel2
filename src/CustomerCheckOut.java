@@ -361,7 +361,10 @@ public class CustomerCheckOut extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:SEARCH BUTTON
         String roomNo=jTextField10.getText();
-        try  {ResultSet rs = select.getData("select * from customer where roomNo='"+roomNo+"' ");
+        try  { String query = "SELECT * FROM customer c " +
+                   "JOIN room r ON c.roomNo = r.roomNo " +
+                   "WHERE c.roomNo = '" + roomNo + "' AND r.status = 'booked'";
+    ResultSet rs = select.getData(query);
 
 
         if(rs.next()){
